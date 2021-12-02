@@ -26,7 +26,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Tic Tac Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VX8-bO-eMo">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                        <color key="textColor" systemColor="systemPurpleColor"/>
+                                        <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Red Starts!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAb-lR-Qxd">
@@ -41,13 +41,13 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Art-U2-Ihj">
-                                <rect key="frame" x="20" y="112" width="345" height="544"/>
+                                <rect key="frame" x="20" y="124" width="345" height="532"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xea-VL-u1E">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="174.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="170.66666666666666"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufm-At-g8t">
-                                                <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="174.66666666666666"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufm-At-g8t">
+                                                <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="170.66666666666666"/>
                                                 <color key="backgroundColor" name="beige_buttons"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -56,9 +56,12 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="boardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MTc-SY-jun"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTk-Z7-AaG">
-                                                <rect key="frame" x="118.33333333333334" y="0.0" width="108.33333333333334" height="174.66666666666666"/>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTk-Z7-AaG">
+                                                <rect key="frame" x="118.33333333333334" y="0.0" width="108.33333333333334" height="170.66666666666666"/>
                                                 <color key="backgroundColor" name="beige_buttons"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -67,9 +70,12 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="boardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbW-jb-GIQ"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaC-IH-nSB">
-                                                <rect key="frame" x="236.66666666666671" y="0.0" width="108.33333333333334" height="174.66666666666666"/>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaC-IH-nSB">
+                                                <rect key="frame" x="236.66666666666671" y="0.0" width="108.33333333333334" height="170.66666666666666"/>
                                                 <color key="backgroundColor" name="beige_buttons"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -78,14 +84,17 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="boardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Yj-Yo-F6t"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dM2-IH-T7r">
-                                        <rect key="frame" x="0.0" y="184.66666666666669" width="345" height="174.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="180.66666666666669" width="345" height="170.66666666666669"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olh-C7-olk">
-                                                <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="174.66666666666666"/>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olh-C7-olk">
+                                                <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="170.66666666666666"/>
                                                 <color key="backgroundColor" name="beige_buttons"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -94,9 +103,12 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="boardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kHx-aZ-1g3"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTW-fN-MVb">
-                                                <rect key="frame" x="118.33333333333334" y="0.0" width="108.33333333333334" height="174.66666666666666"/>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTW-fN-MVb">
+                                                <rect key="frame" x="118.33333333333334" y="0.0" width="108.33333333333334" height="170.66666666666666"/>
                                                 <color key="backgroundColor" name="beige_buttons"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -105,9 +117,12 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="boardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pun-Fy-wxr"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9A-Qb-P4G">
-                                                <rect key="frame" x="236.66666666666671" y="0.0" width="108.33333333333334" height="174.66666666666666"/>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9A-Qb-P4G">
+                                                <rect key="frame" x="236.66666666666671" y="0.0" width="108.33333333333334" height="170.66666666666666"/>
                                                 <color key="backgroundColor" name="beige_buttons"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -116,14 +131,17 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="boardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vou-6z-LyO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iDo-KE-BtI">
-                                        <rect key="frame" x="0.0" y="369.33333333333331" width="345" height="174.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="361.33333333333331" width="345" height="170.66666666666669"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmJ-Sp-PqZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="174.66666666666666"/>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmJ-Sp-PqZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="170.66666666666666"/>
                                                 <color key="backgroundColor" name="beige_buttons"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -132,9 +150,12 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="boardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R3b-hL-qGu"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rq-CY-u6S">
-                                                <rect key="frame" x="118.33333333333334" y="0.0" width="108.33333333333334" height="174.66666666666666"/>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rq-CY-u6S">
+                                                <rect key="frame" x="118.33333333333334" y="0.0" width="108.33333333333334" height="170.66666666666666"/>
                                                 <color key="backgroundColor" name="beige_buttons"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -143,9 +164,12 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="boardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4fu-Gx-dG4"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1X-qU-EQo">
-                                                <rect key="frame" x="236.66666666666671" y="0.0" width="108.33333333333334" height="174.66666666666666"/>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1X-qU-EQo">
+                                                <rect key="frame" x="236.66666666666671" y="0.0" width="108.33333333333334" height="170.66666666666666"/>
                                                 <color key="backgroundColor" name="beige_buttons"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -154,6 +178,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="boardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJ4-XB-iMm"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -220,7 +247,7 @@
                             <constraint firstAttribute="bottom" secondItem="MhF-oy-BLV" secondAttribute="bottom" id="akd-VI-8lV"/>
                             <constraint firstItem="MhF-oy-BLV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hCW-KL-zp0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1wx-ej-wpK" secondAttribute="trailing" id="m9V-xN-r99"/>
-                            <constraint firstItem="Art-U2-Ihj" firstAttribute="top" secondItem="1wx-ej-wpK" secondAttribute="bottom" constant="8" id="qqK-WE-PYP"/>
+                            <constraint firstItem="Art-U2-Ihj" firstAttribute="top" secondItem="1wx-ej-wpK" secondAttribute="bottom" constant="20" id="qqK-WE-PYP"/>
                             <constraint firstItem="1wx-ej-wpK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rdq-H9-Z7j"/>
                             <constraint firstItem="ew0-mt-ki6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vRC-UF-r1H"/>
                             <constraint firstItem="bvf-G0-1jU" firstAttribute="top" secondItem="Art-U2-Ihj" secondAttribute="bottom" constant="8" id="zCg-uD-Uxf"/>
@@ -228,15 +255,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="BCButton" destination="9Rq-CY-u6S" id="VGm-gp-NX1"/>
-                        <outlet property="BLButton" destination="gmJ-Sp-PqZ" id="jtG-M0-tvH"/>
-                        <outlet property="BRButton" destination="y1X-qU-EQo" id="u6g-Ph-kvz"/>
-                        <outlet property="CCButton" destination="XTW-fN-MVb" id="ZLk-M5-1mq"/>
-                        <outlet property="CLButton" destination="olh-C7-olk" id="a1f-zl-Bml"/>
-                        <outlet property="CRButton" destination="v9A-Qb-P4G" id="qIR-V7-lIK"/>
-                        <outlet property="TCButton" destination="KTk-Z7-AaG" id="f5p-eQ-1Hc"/>
-                        <outlet property="TLButton" destination="Ufm-At-g8t" id="hqW-6j-GgH"/>
-                        <outlet property="TRButton" destination="NaC-IH-nSB" id="iw9-yW-oeZ"/>
+                        <outlet property="block1" destination="Ufm-At-g8t" id="hqW-6j-GgH"/>
+                        <outlet property="block2" destination="KTk-Z7-AaG" id="f5p-eQ-1Hc"/>
+                        <outlet property="block3" destination="NaC-IH-nSB" id="iw9-yW-oeZ"/>
+                        <outlet property="block4" destination="olh-C7-olk" id="a1f-zl-Bml"/>
+                        <outlet property="block5" destination="XTW-fN-MVb" id="ZLk-M5-1mq"/>
+                        <outlet property="block6" destination="v9A-Qb-P4G" id="qIR-V7-lIK"/>
+                        <outlet property="block7" destination="gmJ-Sp-PqZ" id="jtG-M0-tvH"/>
+                        <outlet property="block8" destination="9Rq-CY-u6S" id="VGm-gp-NX1"/>
+                        <outlet property="block9" destination="y1X-qU-EQo" id="u6g-Ph-kvz"/>
                         <outlet property="resetButton" destination="hVF-9O-b00" id="NXL-kE-JR2"/>
                         <outlet property="turnLabel" destination="KAb-lR-Qxd" id="pvS-1a-buI"/>
                         <outlet property="winnerLabel" destination="Zfr-B6-PN2" id="CeR-Cg-jfc"/>
@@ -250,7 +277,7 @@
     <resources>
         <image name="bgImage" width="1111.6666259765625" height="1667"/>
         <namedColor name="beige_buttons">
-            <color red="0.97875887159999997" green="0.88953006270000001" blue="0.55287432670000003" alpha="0.89628590969999999" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.84432996285435968" green="0.91602545275882752" blue="0.97628980880000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="white_bg_transparent">
             <color red="1" green="1" blue="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
